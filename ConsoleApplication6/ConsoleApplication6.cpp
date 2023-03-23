@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -16,20 +16,10 @@ int main()
 		n3 = i % 10;
 
 
-		if (n1 == n2 && n1!=n3 && n2!=n3) {
-			counter1++;
-		}
-		if (n2 == n1 && n2 != n3 && n1 != n3) {
-			counter1++;
-		}
-		if (n3 == n2 && n1 != n3 && n2 != n3) {
-			counter1++;
-		}
-		if (n1 == n3 && n1 != n2 && n3 != n2) {
+		if (n1 != n2 && n1 != n3 && n2!=n3) {
 			counter1++;
 		}
 	}
-cout << "Количество целых чисел в диапазоне от 100 до 999, у которых есть две одинаковые цифры ->" << counter1;
-		
-}
+cout << "Количество целых чисел в диапазоне от 100 до 999, у которых все цифры разные ->" << counter1;
 
+}
