@@ -10,8 +10,6 @@ int main()
     cin >> n;
     cout << "Делиться без остатка на: " << endl;
 
-    n = (n < 0) ? -n : n;
-
     for (int i = -n; i <= n; i++) {
         if (i == 0)
         {
