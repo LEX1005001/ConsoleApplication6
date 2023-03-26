@@ -1,35 +1,25 @@
-﻿#include <iostream>
+﻿##include<iostream>
+#include<cmath>
 using namespace std;
 
 int main()
 {
-	setlocale(0, "ru");
-	int n1;
-	int n2;
-	int n3;
-	int counter1 = 0;
+    setlocale(0, "ru");
+    cout << "Введите число:";
+    int n;
+    cin >> n;
+    cout << "Делиться без остатка на: " << endl;
 
-	for (int i = 100; i < 1000; i++) 
-	{
-		n1 = i / 100;
-		n2 = i / 10 % 10;
-		n3 = i % 10;
+    n = (n < 0) ? -n : n;
 
-
-		if (n1 == n2 && n1!=n3 && n2!=n3) {
-			counter1++;
-		}
-		if (n2 == n1 && n2 != n3 && n1 != n3) {
-			counter1++;
-		}
-		if (n3 == n2 && n1 != n3 && n2 != n3) {
-			counter1++;
-		}
-		if (n1 == n3 && n1 != n2 && n3 != n2) {
-			counter1++;
-		}
-	}
-cout << "Количество целых чисел в диапазоне от 100 до 999, у которых есть две одинаковые цифры ->" << counter1;
-		
+    for (int i = -n; i <= n; i++) {
+        if (i == 0)
+        {
+          continue;
+        }   
+        if (n % i == 0)
+        {
+            cout << i << ' ';
+        }
+    }
 }
-
