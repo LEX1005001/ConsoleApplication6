@@ -1,19 +1,22 @@
-#include <iostream>
+#include<iostream>
+#include<cmath>
 using namespace std;
 
 int main()
 {
-	setlocale(0, "RU");
-	int A, B;
-	cout << "Введите число A: ";
-	cin >> A;
-	for (int i = A - 1; i > 1; i--)
+	setlocale(0, "ru");
+	int a, sum = 0;
+	cin >> a;
+	for (int b = a; b > 0; b /= 10)
 	{
-		B = i;
-		if ((A % (B * B) == 0) && (A % (B * B * B) != 0))
-		{
-			cout << B << "\n";
-		}
+		sum += b % 10;
+	}
+	if (sum * sum * sum == a * a) {
+		cout << "Подходит" << endl;
+	}
+	else
+	{
+		cout << "Не подходит" << endl;
 	}
 }
 
